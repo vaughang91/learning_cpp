@@ -19,20 +19,33 @@ int main() {
 
     std::vector<std::string> stooges {"larry", "moe", "curly"}; 
 
+
     for(std::string stooge : stooges){
-    std::cout << "" << stooge << "\t";
+        std::cout << "" << stooge << "\t";  // PRINT OUT VECTOR
+    }
+
+    std::cout << std::endl ; 
+
+    for(std::string stooge : stooges){  //CHANGE VECTOR IN FUNCTION WITHOUT THE & REFERENCER 
+        stooge = "No &";
     }
 
     std::cout << std::endl;
 
-    for(std::string &stooge : stooges){
-    stooge = "gay";
+    for(std::string stooge : stooges){
+        std::cout << "" << stooge << "\t";
+    }
+
+    std::cout << std::endl;
+
+    for(std::string &stooge : stooges){  //CHANGE VECTOR IN FUNCTION WITH THE & REFERENCER
+        stooge = "With &";
     }
 
     std::cout << std::endl;
     
     for(std::string stooge : stooges){
-    std::cout << "" << stooge << "\t";
+        std::cout << "" << stooge << "\t";
     }
 
 
