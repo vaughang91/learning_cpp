@@ -1,8 +1,9 @@
 #include <iostream>
+#include <fstream>
+#include <string>
 
 
-
-int main(argc, argv)
+int main(int argc, char* argv)
 {  
    int i;
    for(i=0; i < argc; i++){
@@ -11,7 +12,7 @@ int main(argc, argv)
 
 
 
-    std::cout <<"int size = "<<sizeof(int)<<"\n"<<endl;
+    std::cout <<"int size = "<<sizeof(int)<<"\n"<< std::endl;
 
 
        return 0;

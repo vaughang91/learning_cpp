@@ -10,3 +10,7 @@ int main()
     return 0;
 
 }
+
+// TO RUN CODE COMPILE AND RUN 
+// g++ filename.cpp 
+// ./filename 

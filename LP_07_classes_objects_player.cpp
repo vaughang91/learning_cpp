@@ -7,14 +7,18 @@ inline void keep_window_open() { char ch; std::cin >> ch; }
 
     class Player{
     //attributes
-    public:
+    public:   //needs to be stated when using classes to view outside of the class
         std::string name = "undefined name";
         int health = 100;
         int xp = 1;
         
     //methods (fucntions in the class)
         
-        void talk(std::string); 
+        void talk(std::string text_to_say)
+            {
+                std::cout << name << "says " << text_to_say << std::endl;
+            }
+
         bool is_dead();   
 
     };
@@ -23,7 +27,13 @@ int main() {
     //
 
     Player vaughan;
-       // vaughan.name = "Vaughan";  
+   
+    std::cout << "" << vaughan.name << std::endl;
+    vaughan.name = "Vaughan Gittel";
+    std::cout << "" << vaughan.name << "\t" << std::endl;
+    vaughan.talk("hey fuck face");
+
+
     Player hero; 
        // hero.name = "Hero"; 
 
@@ -40,11 +50,7 @@ int main() {
     player_vect.push_back(vaughan); //add into vector player named vaughan
     player_vect.push_back(hero); //add into vector player named hero
 
-    std::cout << "" << vaughan.name << std::endl;
 
-    vaughan.name = "Vaughan Gittel";
-
-    std::cout << "" << vaughan.name << "\t" << std::endl;
 
 
    
