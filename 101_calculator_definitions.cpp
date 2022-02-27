@@ -47,6 +47,24 @@ tells it which class it is linked to...  Bank_Account::my_method()
     }
  
 
+double Calculator::Calculate(double x, char oper, double y)
+{
+    switch(oper)
+    {
+        case '+':
+            return x + y;
+        case '-':
+            return x - y;
+        case '*':
+            return x * y;
+        case '/':
+            return x / y;
+        default:
+            return 0.0;
+    }
+} 
+
+
 /*
  
 void Bank_Account::set_balance(double bal){

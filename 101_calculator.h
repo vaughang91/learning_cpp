@@ -4,7 +4,7 @@
 this header file holds the SPECIFICATION of the class,  members and method function names. 
 */
 
-#ifndef _101_CALCULATOR_H_ 
+#ifndef _101_CALCULATOR_H_  // an include guard
 #define _101_CALCULATOR_H_ 
 
 
@@ -13,29 +13,14 @@ double add();
 
 double pythagoras();
 
- 
+
+class Calculator
+{
+   public:
+      double Calculate(double x, char oper, double y);
+};
+
 #endif 
 
 
 
-/*
-class Bank_Account{
-    private: 
-       std::string name;
-       double balance;
-
-    public: 
-       void set_balance(double bal);
-       
-       void set_account_name (std::string n);
-
-       std::string get_account_name(); 
-          
-       double get_balance ();
-                 
-       bool withdraw(double bal);
-              
-       bool deposit(double bal);
-
-    };
-    */

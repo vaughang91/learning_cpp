@@ -7,12 +7,7 @@ this header file holds the SPECIFICATION of the class,  members and method funct
 #ifndef _LP_09_ACCOUNT_CLASS_H_ 
 #define _LP_09_ACCOUNT_CLASS_H_ 
 
-#include<string>
-#include<iostream>
-#include<string>
-#include<vector>
-#include<algorithm>
-#include<cmath>
+
 
     class Bank_Account{
     private: 

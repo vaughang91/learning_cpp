@@ -3,8 +3,12 @@
 this header cpp file holdes the IMPLEMENTATION actual function body and links the function to the class using :: scope operator 
 tells it which class it is linked to...  Bank_Account::my_method()
 */
-
-#include"LP_09_account_class.h"
+#include<iostream>
+#include<string>
+#include<vector>
+#include<algorithm>
+#include<cmath>
+#include"LP_09_account_class.h"  //NEVER INCLUDE .cpp FILES!   ONLY .h FILES  !!!!!!!!!!!!!!!!!!
 
     void Bank_Account::set_balance(double bal){
            balance = bal; 
