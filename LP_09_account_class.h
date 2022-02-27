@@ -1,7 +1,7 @@
 //#pragma once     - seems to throw error on this compiler.. maybe not supported. 
 
 /*
-this header file holds the SPECIFICATION of the class,  members and method function names. 
+this header file holds the SPECIFICATION/ DEFINITIONS of the classes,  members and method function names. 
 */
 
 #ifndef _LP_09_ACCOUNT_CLASS_H_ 
