@@ -1,3 +1,5 @@
+// THIS IS THE MAIN.cpp FILE - the entry point into the program for the compiler and linker
+
 #include<iostream>
 #include<string>
 #include<vector>
@@ -8,57 +10,32 @@
 
 inline void keep_window_open() { char ch; std::cin >> ch; }
 
-    class Bank_Account{
-    private: 
-       //attributes
-       std::string name;
-       double balance;
- 
-    public: 
-       // you need public methods to access private members in the class object   
-       void set_balance(double bal){
-           balance = bal; 
-       }
-       void set_account_name (std::string n){
-           name = name; 
-       } 
-       double get_balance (){
-           return balance;  
-       }             
-       bool withdraw(double ammount){
-           std::cout << "in deposit method function" << std::endl;
-           
-           if(balance-ammount >= 0){      //verify enough funds availble
-               balance -= ammount; 
-               return true; 
-           }else{ 
-               return false; 
-           }
-       }; //a function that takes in a withdraw ammount and returns a bool 1 if successfull 
-       
-       bool deposit(double ammount){
-            balance += ammount; 
-            std::cout << "in withdraw" << std::endl;  
-            return 1;  
-       };             
-    };
-
-
-
 int main() {
     //
+    double user_input = 0; 
+
+
+
+    std::cout << "set balance = " << std::endl; 
+    std::cin >> user_input; 
 
 
 
     Bank_Account vaughan_gittel_account;
     vaughan_gittel_account.set_account_name("Vaughans Account");
-    vaughan_gittel_account.set_balance (5000.00); 
+    vaughan_gittel_account.set_balance (user_input); 
 
     Bank_Account kaylee_eljed_account;
 
 
     vaughan_gittel_account.deposit(1000.00);
-    vaughan_gittel_account.withdraw(500.00);
+    if(vaughan_gittel_account.withdraw(7000.00)){
+         std::cout << "done" << std::endl;
+       }else{ 
+         std::cout << "not done" << std::endl;
+         return false; 
+           };
+
 
    std::cout << "Vaughans account balance = " << vaughan_gittel_account.get_balance() << std::endl; 
     
