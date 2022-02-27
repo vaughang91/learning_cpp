@@ -19,7 +19,7 @@ int main() {
     std::cout << "set balance = " << std::endl; 
     std::cin >> user_input; 
 
-
+/*
 
     Bank_Account vaughan_gittel_account;
     vaughan_gittel_account.set_account_name("Vaughans Account");
@@ -38,7 +38,7 @@ int main() {
 
 
    std::cout << "Vaughans account balance = " << vaughan_gittel_account.get_balance() << std::endl; 
-    
+    */
 
 
 

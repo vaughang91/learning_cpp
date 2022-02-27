@@ -11,6 +11,20 @@ tells it which class it is linked to...  Bank_Account::my_method()
 #include<cmath>
 #include"LP_09_account_class.h"  //NEVER INCLUDE .cpp FILES!   ONLY .h FILES  !!!!!!!!!!!!!!!!!!
 
+   
+    Bank_Account::Bank_Account(std::string name_val, double balance_val)
+        :name(name_val), balance(balance_val){ //setting default values for intialisation
+        }
+
+      
+    //COPY CONSTRUCTOR
+    Bank_Account::Bank_Account(const Bank_Account &source)
+        :name(source.name), balance(source.balance){
+        }
+
+    //DESTUCTOR
+    Bank_Account::~Bank_Account() { std::cout << "Destrcutor called for: " << name << std::endl;}
+    
     void Bank_Account::set_balance(double bal){    //here we are defining the set_balance method under the Bank_Account Class
            balance = bal; 
        }

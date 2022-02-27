@@ -10,45 +10,30 @@ this header file holds the SPECIFICATION/ DEFINITIONS of the classes,  members a
 
 
     class Bank_Account{
-    private: 
-       std::string name;
-       double balance;
+        private: 
+            std::string name;
+            double balance;
 
-    public: 
-       void set_balance(double bal);
-       
-       void set_account_name (std::string n);
+        public: 
+            // CONSTRUCTOR INITIALISATION =  this way is ok....
+                                            //Bank_Account();
+                                            //Bank_Account(std::string name_val);
+                                            //Bank_Account(std::string name_val, double bal_val);
+            //this way is best 
+            //Bank_Account(); //setting default values for intialisation
+            Bank_Account(std::string name_val = "none", double balance_val = 0); //setting default values for intialisation
+            //COPY CONSTRUCTOR DECLARATION
+            Bank_Account(const Bank_Account &source);
+             //DESTUCTOR DECLARATION
+            ~Bank_Account();
 
-       std::string get_account_name(); 
-          
-       double get_balance ();
-                 
-       bool withdraw(double bal);
-              
-       bool deposit(double bal);
-
+            //METHOD FUNCTIONS 
+            void set_balance(double bal);    
+            void set_account_name (std::string n);
+            std::string get_account_name();                
+            double get_balance ();                        
+            bool withdraw(double bal);                   
+            bool deposit(double bal);
     };
  
 #endif 
-/*
- void set_balance(double bal){
-           balance = bal; 
-       }
-       void set_account_name (std::string name){
-           name = name; 
-       } 
-       double get_balance (){
-           return balance;  
-       }             
-       bool withdraw(double bal){
-           balance += bal; 
-           std::cout << "in deposit" << std::endl;
-           return 1; 
-       }; //a function that takes in a withdraw ammount and returns a bool 1 if successfull 
-       
-       bool deposit(double bal){
-            balance -= bal; 
-            std::cout << "in withdraw" << std::endl;  
-            return 1;  
-
-    */
