@@ -33,15 +33,16 @@ Mystring::~Mystring() {
     delete [] str;
 }
 
-// Copy assignment
+// Copy assignment    -  deep copy
 Mystring &Mystring::operator=(const Mystring &rhs) {
     std::cout << "Copy assignment" << std::endl;
-    if (this == &rhs)
+    if (this == &rhs)                                 //check to see if the pointer of this is the same as rhs
         return *this;
-    delete [] this->str;
-    str = new char[std::strlen(rhs.str) + 1];
+    delete [] this->str;                              //delete the allocated space in str
+    str = new char[std::strlen(rhs.str) + 1];         //allocate memory on the heap the size of rhs
     std::strcpy(this->str, rhs.str);
     return *this;
+    
 }
 
 
